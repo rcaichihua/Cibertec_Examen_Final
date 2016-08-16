@@ -1,0 +1,91 @@
+﻿@model Cibertec_Examen_Final.model.authors
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>authors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.au_lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.au_subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.au_subject)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.au_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

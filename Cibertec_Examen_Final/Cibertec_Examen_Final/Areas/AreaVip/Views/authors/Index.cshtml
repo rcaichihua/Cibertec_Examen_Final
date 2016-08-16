@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Cibertec_Examen_Final.model.authors>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.au_lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.au_subject)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_lname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.au_subject)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.au_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.au_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.au_id })
+        </td>
+    </tr>
+}
+
+</table>
